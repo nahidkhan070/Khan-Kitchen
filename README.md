@@ -3,151 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khan Kitchen & Culinary | Gourmet Menu</title>
+    <title>Khan Kitchen & Culinary | Premium Dining</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover; background-position: center;
+        :root {
+            --gold: #D4AF37;
+            --smoke: rgba(255, 255, 255, 0.1);
         }
-        .accent-gold { color: #D4AF37; }
-        .bg-gold { background-color: #D4AF37; }
-        .food-card:hover img { transform: scale(1.05); transition: 0.5s; }
-        .food-card img { transition: 0.5s; }
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: white; scroll-behavior: smooth; }
+        .font-serif { font-family: 'Cinzel', serif; }
+        
+        /* Gold Hover Effect */
+        .gold-button {
+            border: 1px solid var(--gold);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .gold-button:hover {
+            background-color: var(--gold);
+            color: black;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Smoke Animation Overlay */
+        .smoke-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        /* Parallax Background */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Logo Glow */
+        .logo-glow {
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body>
 
-    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex flex-col">
-                <span class="text-xl font-bold tracking-tight text-gray-900">KHAN KITCHEN</span>
-                <span class="text-xs uppercase tracking-[0.2em] accent-gold font-semibold">& Culinary</span>
-            </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-wide">
-                <a href="#home" class="hover:accent-gold">Home</a>
-                <a href="#menu" class="hover:accent-gold">Menu</a>
-                <a href="#order" class="bg-black text-white px-5 py-2 rounded hover:bg-gray-800 transition">Order Now</a>
-            </div>
-        </div>
-    </nav>
+    <header id="home" class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <video autoplay muted loop playsinline class="absolute z-0 w-auto min-w-full min-h-full max-w-none">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-grilling-meat-and-vegetables-on-a-flaming-grill-4235-large.mp4" type="video/mp4">
+        </video>
+        
+        <div class="absolute z-10 w-full h-full bg-gradient-to-b from-black/60 via-black/40 to-[#050505]"></div>
+        <div class="smoke-overlay z-20"></div>
 
-    <header id="home" class="hero-bg h-[60vh] flex items-center justify-center text-center text-white px-4">
-        <div>
-            <h2 class="text-5xl md:text-6xl font-serif mb-4">Taste the Tradition</h2>
-            <p class="text-lg text-gray-300 tracking-widest uppercase">Kebabs • Curries • Perfection</p>
+        <div class="relative z-30 text-center px-4">
+            <div class="mb-4">
+                <span class="block text-gold text-sm tracking-[0.5em] uppercase mb-2">Established 2026</span>
+                <h1 class="text-5xl md:text-8xl font-serif font-bold text-[#D4AF37] logo-glow tracking-tighter">KHAN</h1>
+                <p class="text-xl md:text-2xl font-serif text-white tracking-[0.3em] mt-2">KITCHEN & CULINARY</p>
+            </div>
+            <div class="mt-10">
+                <a href="#order" class="gold-button px-10 py-4 text-sm font-semibold uppercase tracking-widest">Order Now</a>
+            </div>
         </div>
     </header>
 
-    <section id="menu" class="py-20 max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-serif mb-2">Our Culinary Highlights</h2>
-            <p class="text-gray-500 italic">Freshly prepared, instantly invoiced.</p>
-        </div>
-
-        <h3 class="text-2xl font-bold mb-8 flex items-center"><span class="bg-gold w-8 h-1 mr-3"></span> Grilled Kebabs</h3>
-        <div class="grid md:grid-cols-3 gap-8 mb-16">
-            
-            <div class="food-card bg-white rounded-xl shadow-md overflow-hidden">
-                <div class="h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=800&q=80" alt="Seekh Kebab" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-2">
-                        <h4 class="font-bold text-xl">Seekh Kebab</h4>
-                        <span class="accent-gold font-bold">$14.50</span>
-                    </div>
-                    <p class="text-gray-600 text-sm">Spiced minced mutton skewers grilled to a smoky perfection.</p>
+    <section id="menu" class="py-24 bg-[#050505] relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-8">
+                <div>
+                    <h2 class="text-4xl font-serif text-[#D4AF37]">Our Signature Kebabs 🍢</h2>
+                    <p class="text-gray-400 mt-2">Smoked over natural charcoal</p>
                 </div>
             </div>
 
-            <div class="food-card bg-white rounded-xl shadow-md overflow-hidden">
-                <div class="h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1633383718081-22ac93e3dbf1?auto=format&fit=crop&w=800&q=80" alt="Reshmi Kebab" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-2">
-                        <h4 class="font-bold text-xl">Reshmi Kebab</h4>
-                        <span class="accent-gold font-bold">$12.99</span>
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="flex justify-between items-center group cursor-pointer">
+                    <div class="border-l-2 border-[#D4AF37] pl-6 transition-all group-hover:pl-8">
+                        <h4 class="text-xl font-semibold">Reshmi Malai Kebab</h4>
+                        <p class="text-gray-500 text-sm mt-1 italic">Silky cream-marinated chicken</p>
                     </div>
-                    <p class="text-gray-600 text-sm">Silky smooth chicken pieces marinated in cream and mild spices.</p>
+                    <span class="text-[#D4AF37] font-bold">$18</span>
                 </div>
-            </div>
-
-            <div class="food-card bg-white rounded-xl shadow-md overflow-hidden">
-                <div class="h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=800&q=80" alt="Bihari Kebab" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-2">
-                        <h4 class="font-bold text-xl">Bihari Kebab</h4>
-                        <span class="accent-gold font-bold">$15.99</span>
+                <div class="flex justify-between items-center group cursor-pointer">
+                    <div class="border-l-2 border-[#D4AF37] pl-6 transition-all group-hover:pl-8">
+                        <h4 class="text-xl font-semibold">Mutton Seekh Kebab</h4>
+                        <p class="text-gray-500 text-sm mt-1 italic">Traditional spice-blend skewers</p>
                     </div>
-                    <p class="text-gray-600 text-sm">Traditional beef strips with a tender, melt-in-your-mouth texture.</p>
-                </div>
-            </div>
-        </div>
-
-        <h3 class="text-2xl font-bold mb-8 flex items-center"><span class="bg-gold w-8 h-1 mr-3"></span> Signature Curries</h3>
-        <div class="grid md:grid-cols-3 gap-8">
-            
-            <div class="food-card bg-white rounded-xl shadow-md overflow-hidden">
-                <div class="h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=800&q=80" alt="Butter Chicken" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-2">
-                        <h4 class="font-bold text-xl">Butter Chicken</h4>
-                        <span class="accent-gold font-bold">$13.99</span>
-                    </div>
-                    <p class="text-gray-600 text-sm">Rich, creamy tomato gravy with tender grilled chicken chunks.</p>
-                </div>
-            </div>
-
-            <div class="food-card bg-white rounded-xl shadow-md overflow-hidden">
-                <div class="h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1545244603-013988f6a39d?auto=format&fit=crop&w=800&q=80" alt="Mutton Rogan Josh" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-2">
-                        <h4 class="font-bold text-xl">Rogan Josh</h4>
-                        <span class="accent-gold font-bold">$16.50</span>
-                    </div>
-                    <p class="text-gray-600 text-sm">A classic Kashmiri mutton curry cooked with aromatic spices.</p>
-                </div>
-            </div>
-
-            <div class="food-card bg-white rounded-xl shadow-md overflow-hidden">
-                <div class="h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80" alt="Dal Makhani" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-2">
-                        <h4 class="font-bold text-xl">Dal Makhani</h4>
-                        <span class="accent-gold font-bold">$10.99</span>
-                    </div>
-                    <p class="text-gray-600 text-sm">Black lentils slow-cooked overnight with butter and cream.</p>
+                    <span class="text-[#D4AF37] font-bold">$22</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="order" class="py-24 bg-gray-100">
-        <div class="max-w-xl mx-auto px-6 text-center bg-white p-12 rounded-3xl shadow-xl">
-            <h2 class="text-3xl font-serif mb-4">Ready to Eat?</h2>
-            <p class="text-gray-500 mb-8">Click below to place your order. Our system generates your <strong>auto-invoice</strong> instantly for a seamless experience.</p>
-            
-            <button class="bg-black text-white px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition transform">
-                Order Online Now
-            </button>
+    <section class="py-24 parallax" style="background-image: url('https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 bg-black/80"></div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-4xl font-serif text-[#D4AF37] mb-12">Chef Specials 🍛</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 bg-black/40 backdrop-blur-md border border-white/5 rounded-sm hover:border-gold/30 transition">
+                    <h4 class="text-xl font-bold mb-2">Khan Shahi Biryani</h4>
+                    <p class="text-gray-400 text-sm">Long-grain basmati with slow-cooked premium lamb.</p>
+                </div>
+                <div class="p-8 bg-black/40 backdrop-blur-md border border-white/5 rounded-sm hover:border-gold/30 transition">
+                    <h4 class="text-xl font-bold mb-2">Butter Chicken Gold</h4>
+                    <p class="text-gray-500 text-sm">Our signature recipe with a touch of smoked butter.</p>
+                </div>
+                <div class="p-8 bg-black/40 backdrop-blur-md border border-white/5 rounded-sm hover:border-gold/30 transition">
+                    <h4 class="text-xl font-bold mb-2">Handi Mutton</h4>
+                    <p class="text-gray-400 text-sm">Clay-pot slow-cooked curry with secret 21 spices.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-white border-t py-12 text-center">
-        <p class="font-bold tracking-tight">KHAN KITCHEN & CULINARY</p>
-        <p class="text-gray-400 text-xs mt-2 uppercase tracking-widest">&copy; 2026 Professional Dining Experience</p>
+    <section id="order" class="py-32 text-center bg-[#050505]">
+        <div class="max-w-xl mx-auto px-6 border border-[#D4AF37]/20 py-16 bg-black">
+            <i class="fas fa-file-invoice text-3xl text-gold mb-6 block"></i>
+            <h3 class="text-2xl font-serif mb-4 tracking-wider">SECURE CHECKOUT</h3>
+            <p class="text-gray-500 mb-10 text-sm leading-relaxed uppercase tracking-[0.2em]">Automated Invoicing & Instant Confirmation</p>
+            
+            <a href="https://khan-kitchen-culinary.square.site" class="gold-button inline-block px-16 py-5 text-sm font-bold tracking-[0.3em] uppercase">
+                Order Online
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-black border-t border-white/5 py-20 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 text-center md:text-left">
+            <div>
+                <h3 class="font-serif text-[#D4AF37] text-2xl mb-6">Location & Contact</h3>
+                <p class="text-gray-400 leading-loose">123 Culinary Avenue, Food District<br>Dhaka, Bangladesh</p>
+                <p class="text-white mt-4 font-semibold">+880 1XXX-XXXXXX</p>
+            </div>
+            <div class="md:text-right">
+                <h3 class="font-serif text-[#D4AF37] text-2xl mb-6">Dining Hours</h3>
+                <p class="text-gray-400 leading-loose">Mon - Thu: 12:00 PM - 10:00 PM<br>Fri - Sun: 11:00 AM - 11:00 PM</p>
+            </div>
+        </div>
+        <div class="text-center mt-20 text-xs text-gray-700 tracking-[0.5em] uppercase">
+            &copy; 2026 Khan Kitchen & Culinary
+        </div>
     </footer>
 
 </body>
