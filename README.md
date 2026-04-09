@@ -22,7 +22,6 @@
         .splash-card:hover img { transform: scale(1.15); filter: brightness(80%); }
         .splash-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 30px; background: linear-gradient(transparent, rgba(0,0,0,0.95)); }
         
-        /* Smoke Texture */
         .smoke-bg { background-image: url('https://www.transparenttextures.com/patterns/black-linen.png'); }
     </style>
 </head>
@@ -34,7 +33,7 @@
             <a href="#home" class="hover:text-fiery-gold transition">HOME</a>
             <a href="#menu" class="hover:text-fiery-gold transition">KEBAB GALLERY</a>
             <a href="#location" class="hover:text-fiery-gold transition">LOCATION</a>
-            <a href="https://khan-kitchen-culinary.square.site/" target="_blank" class="text-fiery-gold border-b border-fiery-gold/30 pb-1">ORDER ONLINE</a>
+            <a href="https://khan-kitchen.square.site/" target="_blank" class="text-fiery-gold border-b border-fiery-gold/30 pb-1">ORDER ONLINE</a>
         </div>
     </nav>
 
@@ -46,7 +45,7 @@
         <div class="relative z-20 text-center px-6">
             <img src="logo.png" alt="Khan Culinary" class="w-auto h-64 md:h-96 mx-auto drop-shadow-[0_0_35px_rgba(255,153,0,0.3)] animate-pulse" style="animation-duration: 4s;">
             <div class="mt-8">
-                <a href="https://khan-kitchen-culinary.square.site/" target="_blank" class="gold-button inline-block px-12 py-4 text-xs font-bold">
+                <a href="https://khan-kitchen.square.site/" target="_blank" class="gold-button inline-block px-12 py-4 text-xs font-bold">
                     Start Your Order
                 </a>
             </div>
@@ -55,7 +54,7 @@
 
     <section id="menu" class="py-32 max-w-7xl mx-auto px-6">
         <div class="text-center mb-24">
-            <h2 class="text-5xl font-serif text-logo-gold tracking-widest uppercase">The Kebab Collection</h2>
+            <h2 class="text-5xl font-serif text-logo-gold tracking-widest uppercase text-center">The Kebab Collection</h2>
             <div class="w-20 h-1 bg-fiery-gold mx-auto mt-6"></div>
         </div>
 
@@ -86,4 +85,39 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-10 border-t border-white/10 pt-20">
             <div class="group border-b border-white/5 pb-4"><div class="flex justify-between font-bold text-xs tracking-widest"><span>CHICKEN SEEKH KEBAB</span><span class="text-fiery-gold">14</span></div></div>
             <div class="group border-b border-white/5 pb-4"><div class="flex justify-between font-bold text-xs tracking-widest"><span>BEEF SEEKH KEBAB</span><span class="text-fiery-gold">16</span></div></div>
-            <div class="group border-
+            <div class="group border-b border-white/5 pb-4"><div class="flex justify-between font-bold text-xs tracking-widest"><span>MUTTON SEEKH KEBAB</span><span class="text-fiery-gold">18</span></div></div>
+            <div class="group border-b border-white/5 pb-4"><div class="flex justify-between font-bold text-xs tracking-widest"><span>CHICKEN BOTI KEBAB</span><span class="text-fiery-gold">15</span></div></div>
+            <div class="group border-b border-white/5 pb-4"><div class="flex justify-between font-bold text-xs tracking-widest"><span>BEEF BOTI KEBAB</span><span class="text-fiery-gold">17</span></div></div>
+            <div class="group border-b border-white/5 pb-4"><div class="flex justify-between font-bold text-xs tracking-widest"><span>MALAI CHICKEN KEBAB</span><span class="text-fiery-gold">15</span></div></div>
+            <div class="group border-b border-white/5 pb-4"><div class="flex justify-between font-bold text-xs tracking-widest"><span>RESHMI KEBAB</span><span class="text-fiery-gold">16</span></div></div>
+            <div class="group border-b border-white/5 pb-4"><div class="flex justify-between font-bold text-xs tracking-widest"><span>SHAMI KEBAB</span><span class="text-fiery-gold">12</span></div></div>
+            <div class="group border-b border-white/5 pb-4"><div class="flex justify-between font-bold text-xs tracking-widest"><span>CHAPLI KEBAB</span><span class="text-fiery-gold">14</span></div></div>
+            <div class="group border-b border-white/5 pb-4"><div class="flex justify-between font-bold text-xs tracking-widest"><span>DONER KEBAB</span><span class="text-fiery-gold">13</span></div></div>
+            <div class="group border-b border-white/5 pb-4"><div class="flex justify-between font-bold text-xs tracking-widest"><span>TURKISH ADANA KEBAB</span><span class="text-fiery-gold">19</span></div></div>
+            <div class="group border-b border-white/5 pb-4"><div class="flex justify-between font-bold text-xs tracking-widest"><span>SHISH TAOUK KEBAB</span><span class="text-fiery-gold">15</span></div></div>
+            <div class="group border-b border-white/5 pb-4"><div class="flex justify-between font-bold text-xs tracking-widest"><span>TANDOORI CHICKEN KEBAB</span><span class="text-fiery-gold">16</span></div></div>
+            <div class="group border-b border-white/5 pb-4"><div class="flex justify-between font-bold text-xs tracking-widest"><span>HARIYALI CHICKEN KEBAB</span><span class="text-fiery-gold">15</span></div></div>
+            <div class="group border-b border-white/5 pb-4"><div class="flex justify-between font-bold text-xs tracking-widest"><span>AFGHANI CHICKEN KEBAB</span><span class="text-fiery-gold">17</span></div></div>
+        </div>
+    </section>
+
+    <section id="location" class="py-24 bg-black/50">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="h-96 rounded-3xl overflow-hidden border border-white/10 grayscale invert brightness-75">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116541.3852077586!2d90.316869!3d23.999941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755daf54924c03b%3A0x8698944161c9e83b!2sGazipur!5e0!3m2!1sen!2sbd!4v1712650000000!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="text-center md:text-left">
+                <h3 class="font-serif text-logo-gold text-3xl mb-4">Gazipur Culinary HQ</h3>
+                <p class="text-gray-400 mb-8 leading-relaxed">The premier destination for charcoal-grilled excellence. Experience our smoke-infused menu via premium delivery or local pickup.</p>
+                <a href="https://khan-kitchen.square.site/" target="_blank" class="gold-button px-10 py-4 text-[10px] font-bold">Directions & Orders</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-white/5">
+        <img src="logo.png" alt="Khan Kitchen Logo" class="h-16 mx-auto mb-8 opacity-60">
+        <p class="text-[9px] text-gray-700 uppercase tracking-[0.8em]">© 2026 KHAN KITCHEN & CULINARY</p>
+    </footer>
+
+</body>
+</html>
